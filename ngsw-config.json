@@ -5,19 +5,25 @@
     {
       "name": "app",
       "installMode": "prefetch",
+      "cacheConfig": {
+            "maxSize": 3,
+            "maxAge": "2m",
+            "strategy": "freshness"
+      },
       "resources": {
         "files": [
-          "/favicon.ico",
-          "/index.html",
-          "/manifest.webmanifest",
-          "/*.css",
-          "/*.js"
+          "/manifest.webmanifest"
         ]
       }
     }, {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
+      "cacheConfig": {
+            "maxSize": 3,
+            "maxAge": "1h",
+            "strategy": "freshness"
+      },
       "resources": {
         "files": [
           "/assets/**",
